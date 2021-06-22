@@ -80,7 +80,7 @@ def main():
             Game(board, players).start()
             restart = input("Play again? [y]").lower()
             if restart != "y":
-                return
+                sys.exit()
     except KeyboardInterrupt:
         sys.exit()
 
