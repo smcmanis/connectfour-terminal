@@ -20,7 +20,7 @@ def draw_row(row):
 def draw_board(board):
     rows = []
     for y in range(board.height - 1, -1, -1):
-        row = [board.columns[x][y] for x in range(board.width)]
+        row = board.get_row(y)
         rows.append(draw_row(row))
 
     print("\n".join(rows))

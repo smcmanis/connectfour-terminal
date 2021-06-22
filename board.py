@@ -23,6 +23,9 @@ class Board:
         self.columns[x][y] = piece
         self.last_drop = (x, y)
 
+    def get_row(self, y):
+        return [self.columns[x][y] for x in range(self.width)]
+
     def get_valid_moves(self):
         return [x for x in range(self.width) if self.pieces_in_column(x) != self.height]
 
